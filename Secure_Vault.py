@@ -4,8 +4,12 @@ import tkinter
 from tkinter import messagebox
 from tkinter import filedialog
 from tkinter import simpledialog
-from cryptography.fernet import Fernet
 import subprocess
+try:
+    import cryptography
+except ImportError:
+    subprocess.call(['pip', 'install', 'cryptography'])
+from cryptography.fernet import Fernet
 
 name=''
 pas=''
@@ -14,11 +18,6 @@ Key=''
 switch=0
 n = ''
 
-def imporT():
-    try:
-        import cryptography
-    except ImportError:
-        subprocess.call(['pip', 'install', 'cryptography'])
 def switch_frames():
     page.pack_forget()
     pagee.pack()
@@ -315,7 +314,6 @@ def Decrypt(file):
         f.write(context)
 
 
-imporT()
 level=tkinter.Tk()
 level.geometry("700x500")
 level.configure(bg='#595E64')
