@@ -21,7 +21,7 @@ FileSec is a simple file security management tool built with Python and Tkinter.
 - Download and install python 3
 - To check go to `cmd` and run
   ``` python --version ```
-- If Debain Python will be already installed. to check do
+- If Debian Python will be already installed. to check do
 ``` python3 -version```
 ## Installation
 1. If `windows` the open the cmd by searching `cmd` on the windows search bar
@@ -35,7 +35,7 @@ cd Secure_Vault
 ## Run the application:
 Now write this:
 ```
-python Secure_Vault
+python Secure_Vault.py
 ```
 
 ## Usage
