@@ -4,11 +4,12 @@ import tkinter
 from tkinter import messagebox
 from tkinter import filedialog
 from tkinter import simpledialog
+import sys
 import subprocess
 try:
-    import cryptography
+    from cryptography.fernet import Fernet
 except ImportError:
-    subprocess.call(['pip', 'install', 'cryptography'])
+    subprocess.check_call([sys.executable, "-m", "pip", "install", "cryptography"])
 from cryptography.fernet import Fernet
 
 name=''
